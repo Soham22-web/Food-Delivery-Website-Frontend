@@ -1,0 +1,73 @@
+.food-display {
+    margin-top: 30px;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
+
+/* ---------------------------------- */
+/*        RESPONSIVE BREAKPOINTS      */
+/* ---------------------------------- */
+
+/* 750px */
+@media (max-width: 750px) {
+    .food-display h2 {
+        font-size: 22px;
+    }
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 25px;
+        row-gap: 40px;
+    }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 22px;
+        row-gap: 35px;
+    }
+}
+
+/* 500px */
+@media (max-width: 500px) {
+    .food-display h2 {
+        font-size: 20px;
+    }
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 18px;
+        row-gap: 30px;
+    }
+}
+
+/* 430px */
+@media (max-width: 430px) {
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 16px;
+    }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+    .food-display h2 {
+        font-size: 18px;
+    }
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 14px;
+        row-gap: 25px;
+    }
+}

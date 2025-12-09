@@ -1,0 +1,88 @@
+.app-download {
+    margin: auto auto;
+    margin-top: 100px;
+    font-size: max(3vw,20px);
+    text-align: center;
+    font-weight: 500;
+}
+
+.app-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: max(2vw,10px);
+    margin-top: 40px;
+}
+
+.app-download-platforms img {
+    width: max(30vw , 120px);
+    max-width: 180px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.app-download-platforms img:hover {
+    transform: scale(1.05);
+}
+
+/* --------------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* --------------------------- */
+
+/* 750px */
+@media (max-width: 750px) {
+    .app-download {
+        font-size: 22px;
+        margin-top: 70px;
+    }
+    .app-download-platforms img {
+        max-width: 150px;
+    }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+    .app-download {
+        font-size: 20px;
+    }
+    .app-download-platforms {
+        gap: 12px;
+    }
+    .app-download-platforms img {
+        max-width: 130px;
+    }
+}
+
+/* 500px */
+@media (max-width: 500px) {
+    .app-download {
+        font-size: 18px;
+        margin-top: 60px;
+    }
+    .app-download-platforms {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .app-download-platforms img {
+        max-width: 160px;
+        width: 60vw;
+    }
+}
+
+/* 430px */
+@media (max-width: 430px) {
+    .app-download-platforms img {
+        width: 65vw;
+        max-width: 150px;
+    }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+    .app-download {
+        font-size: 16px;
+    }
+    .app-download-platforms img {
+        width: 70vw;
+        max-width: 140px;
+    }
+}

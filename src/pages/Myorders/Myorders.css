@@ -1,0 +1,164 @@
+.my-orders {
+  padding: 20px;
+}
+
+.my-orders h2 {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Each order box */
+.my-orders-order {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+
+  flex-wrap: nowrap;
+  gap: 120px;
+}
+
+/* Parcel icon */
+.my-orders-order img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Items list */
+.order-items {
+  display: flex;
+  flex-wrap: wrap;       /* allow wrapping */
+  gap: 10px;
+  margin: 0;
+
+  flex-shrink: 0;
+  max-width: 350px;      /* keeps layout nice */
+  margin-left: -80px;
+}
+
+/* Each item — 5 per row */
+.order-item-name {
+  font-weight: 500;
+  
+  /* 5 items per row */
+  flex: 0 0 calc(20% - 10px);
+  white-space: nowrap;
+}
+
+/* Values in tomato color */
+.value {
+  color: tomato;
+  font-weight: 600;
+}
+
+/* Status sticks to the right */
+.order-status {
+  margin-left: auto;
+}
+
+/* Status dot */
+.order-status .value::before {
+  content: '● ';
+  margin-right: 3px;
+}
+
+/* Button styling */
+.my-orders-order button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-orders-order button:hover {
+  background-color: #45a049;
+}
+
+/* ---------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* ---------------------- */
+
+@media (max-width: 900px) {
+  .my-orders-order {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .order-status {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .order-items {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .my-orders-order {
+    gap: 10px;
+  }
+  .order-item-name {
+    flex: 0 0 calc(25% - 10px); /* 4 items per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .order-item-name {
+    flex: 0 0 calc(33.33% - 10px); /* 3 items per row */
+    font-size: 14px;
+  }
+  .my-orders-order img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .order-item-name {
+    flex: 0 0 calc(50% - 10px); /* 2 items per row */
+    font-size: 13px;
+  }
+  .my-orders-order {
+    gap: 8px;
+  }
+  .my-orders-order button {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 430px) {
+  .order-item-name {
+    flex: 0 0 calc(100% - 10px); /* 1 item per row */
+    font-size: 12px;
+  }
+  .my-orders-order {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .order-status {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .order-item-name {
+    font-size: 11px;
+  }
+  .my-orders-order button {
+    width: 100%;
+    padding: 5px 0;
+  }
+}
