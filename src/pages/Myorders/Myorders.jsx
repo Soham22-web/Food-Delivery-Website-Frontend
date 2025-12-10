@@ -36,7 +36,6 @@ const Myorders = () => {
 
                         <img src={assets.parcel_icon} alt="parcel" />
 
-                        {/* Food items */}
                         <p className="order-items">
                             {order.items.map((item, i) => (
                                 <span key={i} className="order-item-name">
@@ -46,17 +45,14 @@ const Myorders = () => {
                             ))}
                         </p>
 
-                        {/* Order Amount */}
                         <p>
                             Order Amount: <span className="value">₹{order.amount}</span>
                         </p>
 
-                        {/* Total items */}
                         <p>
                             Items: <span className="value">{order.items.length}</span>
                         </p>
 
-                        {/* Status stuck to the right */}
                         <p className="order-status">
                             Status: <span className="value">{order.status || "No Status"}</span>
                         </p>

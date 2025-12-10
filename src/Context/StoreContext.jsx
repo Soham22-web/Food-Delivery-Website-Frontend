@@ -11,7 +11,6 @@ const StoreContextProvider = (props) => {
 
   const url = "https://food-delivery-website-backend-t378.onrender.com"
 
-    // ✅ Load token from localStorage on startup
     const [token, setToken] = useState(localStorage.getItem("token") || "");
     const [food_list,setFoodList] = useState([])
 
@@ -71,7 +70,6 @@ const StoreContextProvider = (props) => {
         loadData();
     },[])
 
-    // Make sure token is included in context
     const contextValue = {
         food_list,
         cartItems,

@@ -36,7 +36,7 @@ const PlaceOrder = () => {
         quantity: cartItems[item._id]
       }));
 
-    const deliveryFee = getTotalCartAmount() === 0 ? 0 : 40; // INR
+    const deliveryFee = getTotalCartAmount() === 0 ? 0 : 40; // Inr
 
     const orderData = {
       address: data,
